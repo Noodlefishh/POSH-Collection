@@ -1,3 +1,6 @@
+#This script enable you to get the number of files and folders created in a specific path, every years, for the last 20 years or so. 
+#Created by Jonathan Bourbonnais in 2019
+
 $fichiers = Get-ChildItem -Path "\\path\to\file" -Recurse 
 
 $Counter = 0
