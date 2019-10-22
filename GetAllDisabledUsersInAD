@@ -1,0 +1,19 @@
+#1 - Export all user from active directory unfiltered
+#2 - Send all users Active Directory informations into users.csv file
+#3 - Compare all user in the list and export the disabled account into accountDisabled.csv
+#USER_ACCOUNT parameter is setted for the row in the CSV, you can change it.
+
+$allUsers = "C:\temp\users.csv"
+$resultDisabledAccount = "C:\temp\compteDisabled.csv"
+
+Write-Host "Working...Fetching all users from AD Database ..." -ForegroundColor Green
+Get-ADUser -Filter * | Export-Csv -Path $allUsers 
+Write-Host "User list fetched and located in $allUsers" -ForegroundColor Green
+
+$userList = Import-Csv $allUsers | Select-Object Name, SamAccountName, UserPrincipalName
+
+ForEach($users in $userList){
+
+    Get-ADUser $users.SamAccountName  | Where-Object {$_.Enabled -eq $false} | Select-Object Name | Export-Csv $resultDisabledAccount -Append
+
+}
