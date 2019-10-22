@@ -4,7 +4,7 @@
 #3 - Compare all user in the list and export the disabled account into accountDisabled.csv
 
 $allUsers = "C:\temp\users.csv"
-$resultDisabledAccount = "C:\temp\compteDisabled.csv"
+$resultDisabledAccount = "C:\temp\AccountDisabled.csv"
 
 Write-Host "Working...Fetching all users from AD Database ..." -ForegroundColor Green
 Get-ADUser -Filter * | Export-Csv -Path $allUsers 
