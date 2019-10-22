@@ -1,7 +1,7 @@
+#Created by Jonathan Bourbonnais - 2019
 #1 - Export all user from active directory unfiltered
 #2 - Send all users Active Directory informations into users.csv file
 #3 - Compare all user in the list and export the disabled account into accountDisabled.csv
-#USER_ACCOUNT parameter is setted for the row in the CSV, you can change it.
 
 $allUsers = "C:\temp\users.csv"
 $resultDisabledAccount = "C:\temp\compteDisabled.csv"
