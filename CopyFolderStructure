@@ -1,5 +1,5 @@
 #Jonathan Bourbonnais -2019
-#This script enable you to copy the folder structure of a directory without the files in it. 
+#This script enable you to copy (mirror) the folder structure of a directory without the files in it. 
 
 #Path to folder you want to copy
 $sourceFolder = "C:\temp\test1"
