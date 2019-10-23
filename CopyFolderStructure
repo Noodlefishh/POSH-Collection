@@ -7,8 +7,9 @@ $sourceFolder = "C:\temp\test1"
 #Path to the new folder
 $destinationNewFolder = "C:\temp\test2"
 
+#Copy the folder structure from $sourceFolder to $destinationNewFolder
 Get-ChildItem -Recurse $sourceFolder |?{$_.PSIsContainer} | Select-Object Directory  
-Copy-Item  -Path $sourceFolder -Destination $destinationNewFolder -Recurse -Filter  {PSIsContainer}
+Copy-Item  -Path $sourceFolder -Destination $destinationNewFolder -Recurse -Filter {PSIsContainer}
 
 
 
