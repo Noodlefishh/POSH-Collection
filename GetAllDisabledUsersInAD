@@ -1,5 +1,5 @@
 #Created by Jonathan Bourbonnais - 2019
-#Create a report for all the disabled accounts in Active Directory
+#This script create a CSV report for all the disabled accounts in Active Directory
 #1 - Export all user from active directory unfiltered
 #2 - Send all users Active Directory informations into users.csv file
 #3 - Compare all user in the list and export the disabled account into accountDisabled.csv
